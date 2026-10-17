@@ -1,0 +1,63 @@
+    <!DOCTYPE html>
+    <html lang="vi">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Món quà 20/10 💗</title>
+    <meta property="og:title" content="Món quà 20/10 💗">
+    <meta property="og:description" content="Có một món quà nhỏ dành riêng cho bạn... Chạm để mở nhé!">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#f8c8dc">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B7%3C/text%3E%3C/svg%3E">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <canvas id="fx" aria-hidden="true"></canvas>
+    <button id="music" aria-label="Bật/tắt nhạc" hidden><span class="bars"><i></i><i></i><i></i></span></button>
+
+    <main>
+    <section id="s-gift" class="screen active">
+        <p class="top" id="giftTop"></p>
+        <button id="box" aria-label="Mở hộp quà">
+        <div class="lid"><b class="bow">🎀</b></div>
+        <div class="body"><span class="rib"></span></div>
+        <div class="glow"></div>
+        </button>
+        <p class="sub" id="giftSub"></p>
+        <p class="hint">Chạm vào món quà để khám phá nhé!</p>
+    </section>
+
+    <section id="s-wish" class="screen">
+        <h1>CHÚC MỪNG NGÀY 20/10 🌷</h1>
+        <article class="card" id="wishCard"></article>
+        <div class="row">
+        <button class="btn ghost" id="sendWish">...</button>
+        <button class="btn" data-go="s-garden">Khám phá món quà tiếp theo ✨</button>
+        </div>
+    </section>
+
+    <section id="s-garden" class="screen">
+        <h2>Vườn hoa dành cho bạn 🌸</h2>
+        <div id="garden"></div>
+        <p class="quote">Mỗi người đều là một bông hoa mang vẻ đẹp riêng.</p>
+        <p class="hint">Chạm vào từng bông hoa nhé</p>
+        <button class="btn" data-go="s-letter">Còn một lời nhắn nữa 💌</button>
+    </section>
+
+    <section id="s-letter" class="screen">
+        <button id="env" aria-label="Mở phong bì">
+        <div class="front"></div>
+        <div class="flap"></div>
+        <span class="seal">💗</span>
+        </button>
+        <p class="hint" id="envHint">Chạm vào phong bì để mở</p>
+        <article class="card rise" id="letterCard" hidden></article>
+        <p class="final" id="final"></p>
+        <button class="btn" id="replay" hidden>Xem lại món quà</button>
+    </section>
+    </main>
+
+    <script src="script.js"></script>
+    </body>
+    </html>
